@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой опрос</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Старт -->
+        <div id="start">
+            <h1>Привет!</h1>
+            <p>Напиши имя и начнём</p>
+            <input type="text" id="name" placeholder="Твоё имя">
+            <button onclick="startQuiz()">Старт</button>
+        </div>
+
+        <!-- Вопросы -->
+        <div id="quiz" style="display:none;">
+            <h2 id="q-text"></h2>
+            <div id="options"></div>
+            <button id="next" disabled onclick="nextQuestion()">Далее →</button>
+            <div class="progress">Вопрос <span id="q-num">1</span>/8</div>
+        </div>
+
+        <!-- Результат -->
+        <div id="result" style="display:none;">
+            <div class="avatar">
+                <img id="result-img" src="https://i.pinimg.com/1200x/64/c2/76/64c276b085898e19d19bf275db76eec2.jpg" alt="Твоя аватарка">
+            </div>
+            <h2><span id="res-name"></span></h2>
+            <div class="score"><span id="res-score">0</span>/8</div>
+            <p id="message" class="msg"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
